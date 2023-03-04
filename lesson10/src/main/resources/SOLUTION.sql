@@ -1,0 +1,2 @@
+select s.ID, NAME, DESCRIPTION, GRADE from SUBJECT s join MARK M on s.ID = M.SUBJECT_ID group by s.ID having avg(MARK)>(select avg(MARK) from MARK);
+select s.ID, s.NAME, BIRTHDAY, GROUPNUMBER from STUDENT s join PAYMENT P2 on s.ID = P2.STUDENT_ID group by s.ID having sum(AMOUNT)<(SELECT AVG(AMOUNT) FROM PAYMENT);
